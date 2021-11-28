@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.supported-by {
+    .box {
+        display: flex;
+        align-items: center;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        img {
+            height: 150px;
+            margin-right: 40px;
+        }
+
+        @include touch {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 300px;
+                margin-bottom: 30px;
+                margin-right: 0px;
+            }
+        }
+    }
+}

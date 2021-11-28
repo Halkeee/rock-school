@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.footer {
+  background-color: $primary;
+  padding-top: 80px;
+
+  &-info {
+    font-size: 1.25rem;
+    line-height: 2;
+    color: $secondary;
+  }
+
+  &-icon {
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &-container {
+    .title {
+      font-size: $size-1;
+
+      @include touch {
+        font-size: $size-2;
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 5px 0;
+
+  @include touch {
+    font-size: 0.875rem;
+  }
+}

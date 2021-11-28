@@ -1,0 +1,87 @@
+@import "../variables.scss";
+
+.about {
+  &-container {
+    background-color: $secondary;
+
+    &-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      position: relative;
+      z-index: 3;
+
+      img {
+        width: 450px;
+        max-height: 400px;
+        margin-right: 40px;
+      }
+
+      &-text {
+        width: 50%;
+      }
+
+      .question-mark {
+        position: absolute;
+        opacity: 0.05;
+        right: 0;
+        height: 500px;
+        width: auto;
+      }
+
+      @include touch {
+        flex-direction: column-reverse;
+
+        img {
+          margin-right: 0;
+          width: 100%;
+          max-width: 400px;
+          max-height: none;
+        }
+
+        &-text {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &-team {
+    &-container {
+      background-color: $primary;
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+      @include touch {
+        overflow-x: scroll;
+
+        .columns {
+          flex-wrap: nowrap;
+        }
+      }
+    }
+
+    &-member {
+      &-role {
+        font-size: 1.25rem;
+        color: $secondary;
+        font-weight: 300;
+      }
+
+      @include touch {
+        min-width: 200px;
+
+        .title {
+          font-size: $size-4;
+        }
+
+        &-role {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

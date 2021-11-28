@@ -1,0 +1,54 @@
+@import "../variables.scss";
+
+.section-title {
+  width: 100%;
+  padding-top: 40px;
+
+  &-decor-line {
+    width: 100px;
+    height: 5px;
+    background-color: $info;
+    margin-bottom: 20px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      margin-right: 15px;
+    }
+
+    p {
+      white-space: nowrap;
+    }
+
+    &-long-line {
+      width: 100%;
+      max-width: 85%;
+      height: 5px;
+      position: relative;
+      top: 12px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      bottom: 3px;
+      margin-left: 10px;
+      min-height: 48px;
+      min-width: auto;
+
+      @include mobile {
+        width: 32px;
+        height: 32px;
+        bottom: 10px;
+      }
+    }
+  }
+}

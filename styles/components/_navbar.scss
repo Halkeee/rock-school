@@ -1,0 +1,102 @@
+@import "../variables.scss";
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+
+  &-item {
+    font-size: 1.25rem;
+    border-bottom: 3px solid rgba(#fff, 0);
+    transition: 0.15s;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      top: 4px;
+
+      g {
+        fill: $info;
+      }
+    }
+
+    &:hover {
+      color: $info;
+      border-bottom: 3px solid $info;
+    }
+  }
+
+  &.not-on-top {
+    background-color: rgba(#000, 0.6);
+  }
+}
+
+.navbar {
+  &-menu {
+    height: 100vh;
+  }
+
+  &-burger {
+    height: 4rem;
+  }
+
+  &-start {
+      margin-bottom: 80px;
+  }
+  
+  &-end {
+      display: flex;
+      justify-content: center;
+  }
+
+  &-social-medias {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 9999px;
+      border: 1px solid $info;
+
+      transition: 0.15s;
+
+      svg {
+        fill: $info;
+      }
+
+      &.instagram {
+        svg {
+          fill: rgba(#fff, 0);
+          stroke: $info;
+        }
+
+        &:hover {
+          background-color: $info;
+
+          svg {
+            stroke: #fff;
+          }
+        }
+      }
+
+      &.facebook:hover {
+        background-color: $info;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

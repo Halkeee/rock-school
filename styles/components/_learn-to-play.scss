@@ -1,0 +1,43 @@
+@import "../variables.scss";
+
+.learn-to-play {
+  background-color: #e0e0e0;
+  padding-bottom: 70px;
+
+  &-content,
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+    img {
+      height: 400px;
+    }
+  }
+
+  @include touch {
+    padding-bottom: 35px;
+
+    .button.is-medium {
+      font-size: 1rem;
+      padding: 0.375rem 0.875rem;
+    }
+
+    &-container {
+      .columns {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    &-content,
+    &-image {
+      height: auto;
+
+      .section-paragraph {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

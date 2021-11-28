@@ -1,0 +1,55 @@
+@import "../variables.scss";
+
+.studio {
+  &-main {
+    height: 550px;
+    background-image: url("/images/studio-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &-overlay {
+      width: 100%;
+      height: 100%;
+
+      width: 100%;
+      height: 100%;
+
+      background: radial-gradient(
+        126.11% 126.11% at 50% 50%,
+        rgba(0, 0, 0, 0.15) 0%,
+        #000000 100%
+      );
+    }
+
+    @media only screen and (max-width: 470px) {
+      height: 700px;
+    }
+
+    @media only screen and (max-width: 340px) {
+      height: 850px;
+    }
+  }
+
+  &-gallery {
+
+    .gallery {
+      min-height: 600px;
+
+      &-container {
+        margin-top: -225px;
+
+        .image-gallery-content:not(.fullscreen) .image-gallery-image {
+          max-height: 500px !important;
+        }
+      }
+
+      @include touch {
+        min-height: auto;
+        &-container {
+          margin-top: 0;
+        }
+      }
+    }
+
+  }
+}
